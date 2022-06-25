@@ -47,7 +47,7 @@ body {
 }
 
 .purple {
-    color: #b462ff;
+    color: var(--c-purple);
 }
 
 .yellow {
@@ -118,10 +118,6 @@ body {
     line-height: 1.2em;
 }
 
-li {
-    padding-bottom: 1em;
-}
-
 .social-list {
     display: flex;
 }
@@ -130,6 +126,11 @@ li {
     padding: 0.5em;
     font-size: 0.7em;
 }
+
+li {
+    padding-bottom: 1em;
+}
+
 
 /* Style du contenu contenu de details */
 /* Bloc sur le côté */
