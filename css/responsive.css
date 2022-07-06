@@ -1,16 +1,16 @@
 /* STYLE GLOBAUX */
 
 body {
-    --c-black: #1a1a1a;
-    --c-white: #e1e1e1;
-    --c-grey: #23262B;
-    --c-purple: #b462ff;
-    --c-darkPurple :#16093C;
-    --c-fuschia: #ff45b4;
-    --c-blue: #18b6ff;
-    --c-green: #1beb9e;
-    --c-orange: #ff9528;
-    --c-yellow: #dddd25;
+    --c-black: hsl(0, 0%, 10%);
+    --c-white: hsl(0, 0%, 88%);
+    --c-grey: hsl(218, 10%, 15%);
+    --c-purple: hsl(271, 100%, 69%);
+    --c-darkPurple :hsl(255, 74%, 14%);
+    --c-fuschia: hsl(324, 100%, 64%);
+    --c-blue: hsl(199, 100%, 55%);
+    --c-green: hsl(158, 84%, 51%);
+    --c-orange: hsl(30, 100%, 58%);
+    --c-yellow: hsl(60, 73%, 51%);
     --font: 'IBM Plex Mono', monospace;
     background-color: var(--c-black);
     font-family: var(--font);
@@ -23,15 +23,16 @@ body {
 }
 
 .theme-clair {
-    --c-grey: #b1b1b1;
-    --c-black: #d1d6e0;
-    --c-fuschia: #fd1fa4;
-    --c-blue: #148cc4;
-    --c-green: #209454;
-    --c-orange: #ff8000;
-    --c-yellow: #dbdb0f;
-    --c-purple: #8c32e0;
-    --c-white: #1a1a1a;
+    --c-white: hsl(0, 0%, 10%);
+    --c-black: hsl(0, 0%, 88%);
+    --c-grey: hsl(218, 10%, 85%);
+    --c-purple: hsl(271, 100%, 40%);
+    --c-darkPurple :hsl(255, 74%, 14%);
+    --c-fuschia: hsl(324, 100%, 38%);
+    --c-blue: hsl(199, 100%, 32%);
+    --c-green: hsl(158, 84%, 31%);
+    --c-orange: hsl(30, 100%, 34%);
+    --c-yellow: hsl(60, 73%, 38%);
 }
 
 .blue {
@@ -83,17 +84,15 @@ body {
 }
 
 .btn {
-    position: absolute;
-    top: 3em;
     background-color: var(--c-fuschia);
     border: 1px solid var(--c-fuschia);
     border-radius: 0.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
 }
-#moonIcon {
-    right: 2.5em;
-}
-#sunIcon {
-    right: 5em;
+.btnThemeChangeBackground {
+    background-color: var(--c-yellow);
+    border: 1px solid var(--c-yellow);
 }
 
 .left-side__title {
@@ -201,16 +200,6 @@ li {
     .header-content__img {
         padding-top: 0em;
     }
-
-    .btn {
-        top: 1em;
-    }
-    #moonIcon {
-        right: 5em;
-    }
-    #sunIcon {
-        right: 7.5em;
-    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -278,16 +267,12 @@ li {
     }
     .details {
         margin: 2em 0;
-    }   
-    .btn {
-        top: 1em;
     }
-    #moonIcon {
+    #btnTheme {
+        position: absolute;
+        bottom: 0;
         right: 1em;
     }
-    #sunIcon {
-        right: 3.5em;
-    } 
 }
 
 @media screen and (min-width: 1500px) {

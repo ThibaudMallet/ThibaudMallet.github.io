@@ -1,14 +1,7 @@
-// Creation d'une fonction pour changer de theme
+// Initialisation de la page
 
-function changeTheme() {
-    // Selection du body
-    const bodyElement = document.querySelector('body');
+document.addEventListener('DOMContentLoaded', init)
 
-    // Si le body contient la classe theme-clair alors on l'enleve
-    if (bodyElement.classList.contains('theme-clair')) {
-        bodyElement.classList.remove('theme-clair')
-    } else {
-        // Sinon on l'ajoute
-        bodyElement.classList.add('theme-clair');
-    }
+function init() {
+    theme.init();
 }
