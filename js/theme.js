@@ -4,6 +4,14 @@ const theme = {
     init: function() {
         const btnTheme = document.getElementById('btnTheme')
         btnTheme.addEventListener('click', theme.changeTheme);
+
+        const isLightModeActivatedAsString = localStorage.getItem('isLightMode');
+        const isLightModeActivated = JSON.parse(isLightModeActivatedAsString);
+        if (isLightModeActivated !== null) {
+            if (isLightModeActivated) {
+            document.querySelector('body').classList.add('theme-clair');
+            }
+        }
     },
     changeTheme: function() {
         const bodyElement = document.querySelector('body');
@@ -16,6 +24,10 @@ const theme = {
             btnTheme.classList.remove('btnThemeChangeBackground')
         } else {
             btnTheme.classList.add('btnThemeChangeBackground');
-        }   
+        }
+        
+        const isLightMode = bodyElement.classList.contains('theme-clair');
+        const isLightModeStringified = JSON.stringify(isLightMode);
+        localStorage.setItem('isLightMode', isLightModeStringified);
     }
 }
