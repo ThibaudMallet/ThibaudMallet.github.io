@@ -47,8 +47,11 @@
 }
 
 .about__content {
-    height: 50vh;
+    height: 60vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .about__title {
     font-size: 2em;
@@ -57,11 +60,16 @@
 .about__description {
     font-size: 1.2em;
     font-weight: 300;
-    padding: 0 0.3em;
     line-height: 1.2em;
+    letter-spacing: 0.05em;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 90%;
 }
 .about__img {
-    height: 50%;
+    height: 40vh;
     background-image: url(./../images/image1.jpg);
     background-size: cover;
     background-position: center;
@@ -74,7 +82,9 @@
     text-align: center;
 }
 .skills__content {
-    height: 50vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
 }
 .skills__item {
     font-size: 1.1em;
@@ -84,16 +94,23 @@
 
 .skills__title {
     font-size: 1.8em;
-    padding: 0.4em 0 0.25em;
+    padding-top: 0.4em;
+    flex: 1;
 }
 
 .skills__box > img {
     height: 4em;
     width: auto;
 }
+.skills__box {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
 
 .skills_img {
-    height: 50vh;
+    height: 40vh;
     background-image: url(./../images/image2.jpg);
     background-size: cover;
     background-position: center;
