@@ -225,7 +225,9 @@
     text-decoration: none;
     color: black;
     transition: 0.5s;
-
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6em;
 }
 .mail-link:hover {
     color: #4da4bd;
