@@ -1,6 +1,10 @@
 .wrapper {
     font-family: 'Open Sans', sans-serif;
     width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y proximity;
+    overflow: auto;
+    font-size: 2.5vh;
 }
 
 /* HEADER */
@@ -12,32 +16,42 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    scroll-snap-align: center;
 }
 
 .social__img {
-    height: 4em;
-    width: auto;
+    width: 10vw;
 }
+
 .header__img {
-    height: 30vh;
-    width: auto;
+    background-image: url(./../images/photodeprofil.jpg);
+    width: 40vw;
+    height: 50vw;
+    background-size: cover;
+    background-position: center;
+}
+.header-presentation {
+    text-align: center;
 }
 
 .social-list {
     display: flex;
     gap: 1em;
-    margin: 3em 0 3em;
+    align-items: center;
 }
 
 .header__title {
-    font-size: 2.5em;
-    padding: 0.75em 0;
+    color: white;
+    font-size: 10vw;
+    text-shadow: 2px 2px 10px black;
 }
 
 .header__description {
-    font-size: 1.75em;
-    margin-bottom: 2em;
+    color: white;
+    font-size: 7vw;
+    text-shadow: 2px 2px 10px black;
 }
 
 /* ABOUT */
@@ -46,6 +60,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    scroll-snap-align: center;
 }
 
 .about__content {
@@ -86,6 +101,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    scroll-snap-align: center;
 }
 .skills__content {
     display: flex;
@@ -105,7 +121,7 @@
 }
 
 .skills__box > img {
-    height: 10vh;
+    height: 15vw;
     width: auto;
     padding: 0.5em 0;
 }
@@ -130,6 +146,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    scroll-snap-align: center;
 }
 .projects-box {
     height: 100vh;
@@ -167,6 +184,12 @@
 
 /* FOOTER */
 
+.footer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+}
 .mail-link {
     text-decoration: none;
     color: black;
@@ -175,11 +198,6 @@
 .mail-link:hover {
     color: blue;
     font-weight: 700;
-}
-.footer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 .footer__content {
     height: 50vh;
@@ -208,6 +226,16 @@
 /* TABLET */
 
 @media screen and (min-width: 768px) {
+
+    /* HEADER */
+    .header__img {
+        width: 25vw;
+        height: 30vw;
+    }
+    .social__img {
+        width: 8vw;
+    }
+
     /* ABOUT */
     .about {
         height: 100vh;
@@ -240,6 +268,9 @@
     }
     .skills__content {
         width: 50vw;
+    }
+    .skills__box > img {
+        height: 10vw;
     }
     .skills__title {
         font-size: 2.5em;
@@ -289,4 +320,45 @@
         width: 50vw;
         height: 100vh;
     }
+}
+
+/* DESKTOP and LAPTOPS */
+
+@media screen and (min-width: 1224px) {
+
+    /* HEADER */
+    .header__img {
+        width: 15vw;
+        height: 20vw;
+    }
+    .social__img {
+        width: 6vw;
+    }
+    .header__title {
+        font-size: 8vw;
+    }
+    
+    .header__description {
+        font-size: 5vw;
+    }
+}
+
+/* DESKTOP and LAPTOPS */
+
+@media only screen and (min-width : 1824px) {
+        /* HEADER */
+        .header__img {
+            width: 10vw;
+            height: 15vw;
+        }
+        .social__img {
+            width: 4.5vw;
+        }
+        .header__title {
+            font-size: 7vw;
+        }
+        
+        .header__description {
+            font-size: 4vw;
+        }
 }
