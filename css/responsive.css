@@ -10,7 +10,7 @@
 /* HEADER */
 
 .header {
-    background-image: url(./../images/image5.jpg);
+    background-image: url(./../images/image1.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -23,12 +23,12 @@
 
 .social__img {
     width: 10vw;
-    transform: translateY(0.5em);
-    transition: all 0.75s ease-out;
+    transform: translateY(0.25em);
+    transition: 0.5s;
 }
 .social__img:hover {
-    transform: translateY(-0.5em);
-    transition: all 0.75s ease-out;
+    transform: translateY(-0.25em);
+    transition: 0.5s;
 }
 
 .header__img {
@@ -94,7 +94,7 @@
 }
 .about__img {
     flex: 1;
-    background-image: url(./../images/image1.jpg);
+    background-image: url(./../images/image5.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -224,11 +224,13 @@
 .mail-link {
     text-decoration: none;
     color: black;
-    font-style: italic;
+    transition: 0.5s;
+
 }
 .mail-link:hover {
-    color: blue;
-    font-weight: 700;
+    color: #4da4bd;
+    font-weight: 600;
+    transition: 0.5s;
 }
 .footer__content {
     height: 50vh;
