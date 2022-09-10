@@ -2,7 +2,7 @@
     font-family: 'Open Sans', sans-serif;
     width: 100vw;
     height: 100vh;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow: auto;
     font-size: 2.5vh;
 }
@@ -23,6 +23,12 @@
 
 .social__img {
     width: 10vw;
+    transform: translateY(0.5em);
+    transition: all 0.75s ease-out;
+}
+.social__img:hover {
+    transform: translateY(-0.5em);
+    transition: all 0.75s ease-out;
 }
 
 .header__img {
@@ -73,19 +79,18 @@
     font-size: 2em;
     display: flex;
     align-items: center;
-    padding-top: 0.5em;
 }
 .about__description {
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.2em;
     letter-spacing: 0.05em;
+    padding: 0.5em;
     flex: 4;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     width: 90%;
-    padding: 0.5em 0;
 }
 .about__img {
     flex: 1;
@@ -138,13 +143,11 @@
     background-size: cover;
     background-position: center;
 }
-
 /* PROJECTS */
 
 .projects {
     height: 100vh;
     text-align: center;
-    display: flex;
     flex-direction: column;
     scroll-snap-align: center;
 }
@@ -160,20 +163,48 @@
 }
 
 .project-item {
+    background-color: #4da4bd;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
     width: 35%;
     height: 5%;
-    border: 1px solid black;
-    border-radius: 1em;
     margin: auto;
     padding: 2em 1em;
 }
-.project-box__link {
+.project-item::before,
+.project-item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid #f2a772;
+    transition: all 0.5s ease-out;
+}
+.project-item::before {
+    background-color: #f2a772;
+    top: -2vw;
+    left: -2vw;
+}
+.project-item::after {
+    bottom: -2vw;
+    right: -2vw;
+}
+
+.project-item:hover::before {
+    top: 2vw;
+    left: 2vw;
+}
+.project-item:hover::after {
+    bottom: 2vw;
+    right: 2vw;
+}
+.project-item__link {
+    color: white;
     text-decoration: none;
-    color: black;
 }
 .projects__img {
     display: none;
@@ -228,6 +259,9 @@
 @media screen and (min-width: 768px) {
 
     /* HEADER */
+    .header {
+        width: 100vw;
+    }
     .header__img {
         width: 25vw;
         height: 30vw;
@@ -238,7 +272,7 @@
 
     /* ABOUT */
     .about {
-        height: 100vh;
+        width: 100vw;
         flex-direction: row;
     }
 
@@ -263,6 +297,7 @@
     /* SKILLS */
 
     .skills {
+        width: 100vw;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -270,7 +305,7 @@
         width: 50vw;
     }
     .skills__box > img {
-        height: 10vw;
+        height: 8vw;
     }
     .skills__title {
         font-size: 2.5em;
@@ -286,6 +321,8 @@
     /* PROJECTS */
 
     .projects {
+        width: 100vw;
+        display: flex;
         flex-direction: row;
     }
     .projects-box {
@@ -297,10 +334,29 @@
     .projects__img {
         display: block;
         width: 50vw;
+        height: 100vh;
+    }
+    .project-item::before {
+        top: -1vw;
+        left: -1vw;
+    }
+    .project-item::after {
+        bottom: -1vw;
+        right: -1vw;
+    }
+    
+    .project-item:hover::before {
+        top: 1vw;
+        left: 1vw;
+    }
+    .project-item:hover::after {
+        bottom: 1vw;
+        right: 1vw;
     }
     /* FOOTER */
 
     .footer {
+        width: 100vw;
         flex-direction: row;
     }
     .footer__content {
@@ -345,7 +401,7 @@
 
 /* DESKTOP and LAPTOPS */
 
-@media only screen and (min-width : 1824px) {
+@media screen and (min-width : 1824px) {
         /* HEADER */
         .header__img {
             width: 10vw;
