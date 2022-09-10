@@ -44,10 +44,11 @@
 
 .about {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .about__content {
-    height: 60vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -55,21 +56,24 @@
 }
 .about__title {
     font-size: 2em;
-    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5em;
 }
 .about__description {
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.2em;
     letter-spacing: 0.05em;
-    flex: 1;
+    flex: 4;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     width: 90%;
+    padding: 0.5em 0;
 }
 .about__img {
-    height: 40vh;
+    flex: 1;
     background-image: url(./../images/image1.jpg);
     background-size: cover;
     background-position: center;
@@ -80,16 +84,18 @@
 .skills {
     height: 100vh;
     text-align: center;
-}
-.skills__content {
-    height: 60vh;
     display: flex;
     flex-direction: column;
+}
+.skills__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .skills__item {
     font-size: 1.1em;
     text-decoration: underline;
-    padding-bottom: 0.4em;
+    padding: 0.5em 0;
 }
 
 .skills__title {
@@ -99,8 +105,9 @@
 }
 
 .skills__box > img {
-    height: 4em;
+    height: 10vh;
     width: auto;
+    padding: 0.5em 0;
 }
 .skills__box {
     flex: 1.5;
@@ -110,7 +117,7 @@
 }
 
 .skills_img {
-    height: 40vh;
+    flex: 1;
     background-image: url(./../images/image2.jpg);
     background-size: cover;
     background-position: center;
@@ -124,13 +131,18 @@
     display: flex;
     flex-direction: column;
 }
-
+.projects-box {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 .projects__title {
     font-size: 2em;
     padding: 0.5em 0 0.3em; 
 }
 
-.project-box {
+.project-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +158,12 @@
     text-decoration: none;
     color: black;
 }
+.projects__img {
+    display: none;
+    background-image: url(./../images/image4.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
 /* FOOTER */
 
@@ -160,15 +178,19 @@
 }
 .footer {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .footer__content {
     height: 50vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .footer__title {
     font-size: 2em;
-    padding: 0.5em 0 1em;
 }
 .footer__description {
     font-size: 1em;
@@ -176,8 +198,95 @@
     line-height: 1.6em;
 }
 .footer__img {
+    flex: 1;
     height: 50%;
     background-image: url(./../images/image3.jpg);
     background-size: cover;
     background-position: center;
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+    /* ABOUT */
+    .about {
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .about__content {
+        width: 50vw;
+    }
+    .about__title {
+        flex: 1;
+        padding: 0;
+        font-size: 2.5em;
+    }
+    .about__description {
+        flex: 5;
+        padding: 0;
+        line-height: 1.4em;
+        letter-spacing: 0.1em;
+    }
+    .about__img {
+        width: 50vw;
+        height: 100vh;
+    }
+    /* SKILLS */
+
+    .skills {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .skills__content {
+        width: 50vw;
+    }
+    .skills__title {
+        font-size: 2.5em;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills_img {
+        width: 50vw;
+        height: 100vh;
+    }
+    /* PROJECTS */
+
+    .projects {
+        flex-direction: row;
+    }
+    .projects-box {
+        width: 50vw;
+    }
+    .projects__title {
+        font-size: 2.5em;
+    }
+    .projects__img {
+        display: block;
+        width: 50vw;
+    }
+    /* FOOTER */
+
+    .footer {
+        flex-direction: row;
+    }
+    .footer__content {
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .footer__title {
+        font-size: 2.5em;
+    }
+    .footer__description {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.6em;
+    }
+    .footer__img {
+        width: 50vw;
+        height: 100vh;
+    }
 }
